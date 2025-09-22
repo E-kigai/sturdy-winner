@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #51241f;
+  --color-fade: #f6f6f6;
+  --color-background: #ffffff;
+  --color-border: #b3b3b3;
+  --color-body: #f8f7f1;
+ 
+
+  --font-sans: "Open Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-montserrat: "Montserrat Alternates", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-background: #1f2937;
+    --color-text: #f9fafb;
+    --color-text-secondary: #9ca3af;
+    --color-border: #374151;
+    --color-primary: #f87171;
+    --color-secondary: #60a5fa;
+    --color-accent: #a5b4fc;
+    --color-fade: #4b5563;
+    --color-body: #374151;
+  }
+}
+
+body{
+  @apply bg-body;
+}
+
+a, p span {
+  @apply transition-colors duration-200 ml-12;
+}
+
+li{
+  @apply mr-8 text-primary font-poppins;
+}
+
+
+h1{
+  @apply text-8xl font-bold tracking-wider font-montserrat text-primary;
+}
+
+h2{
+  @apply text-6xl font-semibold tracking-wider font-montserrat;
+}
+
+h3{
+  @apply text-4xl font-semibold tracking-wider font-montserrat text-center text-primary;
+}
+
+h4{
+  @apply text-2xl font-semibold tracking-wider font-montserrat text-primary;
+}
+
+p{
+  @apply font-sans tracking-wider max-w-xl mb-8;
+}
+
+button{
+  @apply font-poppins;
+}
+
+hr{
+  @apply text-primary mx-12 opacity-25;
+}
+
+
+.contain{
+  @apply container max-w-7xl mx-auto;
+}
+
+.row {
+  @apply flex items-center justify-between w-full px-12;
+}
+
+.row h3 {
+  @apply mx-auto text-center font-semibold;
+}
+
+.actions {
+  @apply flex gap-2;
+}
+
+
+.row-justified {
+  @apply flex flex-row items-center justify-between;
+}
+
+.col{
+  @apply flex flex-col items-center justify-center text-center py-40;
+}
+
+.primary-btn{
+  @apply bg-primary text-white font-semibold px-8 py-3 rounded-full transition;
+}
+
+
+.secondary-btn{
+  @apply bg-background text-primary font-semibold px-8 py-3 rounded-full transition;
+}
+
+.btn-primary {
+  @apply flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white hover:opacity-90 transition;
+}
+
+
+.btn-outline {
+  @apply flex items-center justify-center w-12 h-12 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white transition;
+}
+
+.grid{
+  @apply grid grid-cols-1 sm:grid-cols-3 gap-6;
+}
+
+.card{
+  @apply relative bg-fade rounded-xl shadow p-6 flex items-center justify-center
+}
+
+.fav{
+  @apply absolute top-2 right-2 text-primary text-lg;
+}
+
+.card img {
+  @apply w-100 h-72 object-contain block;
+}
